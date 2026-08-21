@@ -5,7 +5,7 @@ def main() -> None:
     registry = DocumentParserRegistry()
     scanner = DirectoryScanner(
         directory="data/runbooks",
-        supported_suffixes= {".md", ".txt"},
+        supported_suffixes=registry.supported_suffixes,
     )
 
     for path in scanner.iter_files():
