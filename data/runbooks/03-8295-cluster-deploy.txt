@@ -1,0 +1,9 @@
+8295 仪表应用部署记录（正式手顺，示例数据）
+
+适用：8295 实验室台架，QNX 仪表应用。负责人：平台适配组。更新时间：2026-06-11。
+
+先用 cluster-device identify 核对 platform=8295 和 mode=development。然后运行 cluster-deploy push --platform 8295 --app digital-cluster --slot secondary。上传完成后执行 cluster-deploy activate --slot secondary，等待应用重启。
+
+验证时检查主仪表屏和 HUD 测试屏均有画面，确认显示拓扑与 8295 项目配置一致。若 secondary 槽验证失败，执行 cluster-deploy activate --slot previous。不得把 8155 的部署参数直接用于 8295。
+
+cluster-device 与 cluster-deploy 均为项目虚构工具。
