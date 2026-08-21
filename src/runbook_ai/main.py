@@ -1,5 +1,5 @@
-from docparse.registry import DocumentParserRegistry
-from ingestion.scanner import DirectoryScanner
+from runbook_ai.docparse.registry import DocumentParserRegistry
+from runbook_ai.ingestion.scanner import DirectoryScanner
 
 registry = DocumentParserRegistry()
 

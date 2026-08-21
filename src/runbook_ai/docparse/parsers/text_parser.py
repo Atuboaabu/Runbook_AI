@@ -2,7 +2,7 @@ from pathlib import Path
 from langchain_community.document_loaders import TextLoader
 from langchain_core.documents import Document
 
-from docparse.base import DocumentParser
+from runbook_ai.docparse.base import DocumentParser
 
 class TextParser(DocumentParser) :
     @property
