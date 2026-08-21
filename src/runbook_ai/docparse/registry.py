@@ -1,9 +1,9 @@
 from pathlib import Path
 from langchain_core.documents import Document
 
-from docparse.base import DocumentParser
-from docparse.parsers.markdown_parser import MarkdownParser
-from docparse.parsers.text_parser import TextParser
+from runbook_ai.docparse.base import DocumentParser
+from runbook_ai.docparse.parsers.markdown_parser import MarkdownParser
+from runbook_ai.docparse.parsers.text_parser import TextParser
 
 class DocumentParserRegistry:
     def __init__(self) -> None:
