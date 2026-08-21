@@ -2,10 +2,10 @@ from pathlib import Path
 from langchain_core.documents import Document
 
 from docparse.base import DocumentParser
-from docparse.parasers.markdown_paraser import MarkdownParser
-from docparse.parasers.text_paraser import TextParser
+from docparse.parsers.markdown_parser import MarkdownParser
+from docparse.parsers.text_parser import TextParser
 
-class DocumentParserRegisty:
+class DocumentParserRegistry:
     def __init__(self) -> None:
         self._parsers: list[DocumentParser] = [
             MarkdownParser(),
@@ -18,7 +18,7 @@ class DocumentParserRegisty:
         if not path.exists():
             raise FileNotFoundError(path)
         
-        if not path.is_file:
+        if not path.is_file():
             raise ValueError(f"Expected file, got: {path}")
         
         for parser in self._parsers:

@@ -14,7 +14,7 @@ class DocumentParser(ABC):
         """返回支持的文件扩展名"""
     
     def supports(self, path: Path) -> bool:
-        return path.suffix.lower in self.supported_suffixes
+        return path.suffix.lower() in self.supported_suffixes
     
     @abstractmethod
     def parse(self, path: Path) -> list[Document] :

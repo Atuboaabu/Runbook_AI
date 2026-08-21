@@ -13,7 +13,7 @@ class TextParser(DocumentParser) :
         loader = TextLoader(
             file_path = str(path),
             encoding = "utf-8",
-            autodetec_encoding = True,
+            autodetect_encoding = True,
         )
         documents = loader.load()
         for document in documents:

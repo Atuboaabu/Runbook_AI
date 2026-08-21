@@ -1,7 +1,7 @@
-from docparse.registry import DocumentParserRegisty
+from docparse.registry import DocumentParserRegistry
 from ingestion.scanner import DirectoryScanner
 
-registry = DocumentParserRegisty()
+registry = DocumentParserRegistry()
 
 scanner = DirectoryScanner(
     directory="data/runbooks",
